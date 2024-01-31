@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation Alert!</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="bg"></div>
+    <audio autoplay>
+        <source src="music.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>To the Love of my life,</strong>
+                        <p>
+                            I hope you are smiling upon seeing this invitation, and I hope you won't be bothered by your period anymore. Congratulations on making the President's List, baby! I am so proud of how pretty, independent, and smart of a woman you are. That deserves a celebration, so I am inviting you to a date!
+                            <br/>
+                            - Why: Celebration and Valentines Date<br/>
+                            - When: February 17, 2024, 3 PM after your NSTP<br/>
+                            - Where: Abreeza, Shakey's (I will pick you up)<br/>
+
+                            My Treat!
+                            <br/>
+                            Looking forward to see you baby!
+                            <br/>
+                            Your Handsome Boyfriend,<br/>
+                            Kyle
+                            <button class="valentine-button" onclick="askValentines()">Can I be your valentines date?</button>
+                            <div class="yey-message" id="yeyMessage">Yey!</div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <div class="stars">
+        <!-- You can adjust the number of stars by adding more elements here -->
+        <div class="star" style="left: 10%;"></div>
+        <div class="star" style="left: 20%;"></div>
+        <div class="star" style="left: 30%;"></div>
+        <div class="star" style="left: 40%;"></div>
+        <div class="star" style="left: 50%;"></div>
+        <div class="star" style="left: 60%;"></div>
+        <div class="star" style="left: 70%;"></div>
+        <div class="star" style="left: 80%;"></div>
+        <div class="star" style="left: 90%;"></div>
+    </div>
+    <script>
+       const envelope = document.querySelector('.envelope-wrapper');
+    const valentineButton = document.querySelector('.valentine-button');
+    const yeyMessage = document.getElementById('yeyMessage');
+
+    envelope.addEventListener('click', () => {
+        envelope.classList.toggle('flap');
+        valentineButton.style.display = 'block';
+        yeyMessage.style.display = 'none'; // Hide the message when envelope is clicked
+    });
+
+    function askValentines(event) {
+        // Prevent the click event from reaching the envelope click event
+        event.stopPropagation();
+        yeyMessage.style.display = 'block';
+    }
+    </script>
+</body>
+</html>
